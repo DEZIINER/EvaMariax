@@ -13,4 +13,11 @@ heroku3
 pynewtonmath
 pytz
 aiohttp
-dnspython==2.3.0
+
+
+
+
+
+
+
+
