@@ -84,7 +84,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}]-💠-{file.file_name}", callback_data=f'files#{file.file_id}'
+                    text=f"[{get_size(file.file_size)}]-⚡-{file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
             ]
             for file in files
@@ -393,7 +393,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
     elif query.data.startswith("checksub"):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
-            await query.answer("I Like Your Smartness, But Don't Be Oversmart Okay 😒", show_alert=True)
+            await query.answer("ɪ ʟɪᴋᴇ ʏᴏᴜʀ ꜱᴍᴀʀᴛɴᴇꜱꜱ, ʙᴜᴛ ᴅᴏɴ'ᴛ ʙᴇ ᴏᴠᴇʀꜱᴍᴀʀᴛ ᴏᴋᴀʏ 😒", show_alert=True)
             return
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
@@ -423,13 +423,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
     
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url='http://t.me/The_Music_X_Bot?startgroup=true')
+            InlineKeyboardButton('⚚ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘꜱ ⚚', url='http://t.me/The_Music_X_Bot?startgroup=true')
         ], [
-            InlineKeyboardButton('⚡ SUBSCᏒIBΞ ⚡', url='https://t.me/myfliix'),
-            InlineKeyboardButton('🤖 UᎮDΛTΞS 🤖', url='https://t.me/myfliix')
+            InlineKeyboardButton('🔍 𝚂𝙴𝙰𝚁𝙲𝙷', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('🤖 𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/myfliix')
         ], [
-            InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
-            InlineKeyboardButton('♻️ ΛBOUT ♻️', callback_data='about')
+            InlineKeyboardButton('⚡ 𝙷𝙴𝙻𝙿', callback_data='help'),
+            InlineKeyboardButton('🤝 𝙰𝙱𝙾𝚄𝚃', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -447,9 +447,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('𝙰𝚄𝚃𝙾 𝙵𝙸𝙻𝚃𝙴𝚁', callback_data='autofilter')
         ], [
             InlineKeyboardButton('𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙾𝙽𝚂', callback_data='coct'),
-            InlineKeyboardButton('𝙴𝚇𝚃𝚁𝙰 𝙼𝙾D𝚂', callback_data='extra')
+            InlineKeyboardButton('𝙴𝚇𝚃𝚁𝙰 𝙼𝙾𝙳𝚂', callback_data='extra')
         ], [
-            InlineKeyboardButton('🏠 Home 🏠', callback_data='start'),
+            InlineKeyboardButton('🏠 𝙷𝙾𝙼𝙴', callback_data='start'),
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -459,7 +459,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('🏠 Home 🏠', callback_data='start')
+            InlineKeyboardButton('🏠 𝙷𝙾𝙼𝙴', callback_data='start')
          ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -658,7 +658,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}]-💠-{file.file_name}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"[{get_size(file.file_size)}]-⚡-{file.file_name}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
